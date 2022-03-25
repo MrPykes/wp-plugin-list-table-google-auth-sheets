@@ -186,29 +186,6 @@ class Google_Sheet_Table extends WP_List_Table
      */
     private function sort_data($a, $b)
     {
-        // Set defaults
-        // $orderby = 'Name';
-        // $order = 'asc';
-
-        // // If orderby is set, use this as the sort column
-        // if (!empty($_GET['orderby'])) {
-        //     $orderby = $_GET['orderby'];
-        // }
-
-        // // If order is set use this as the order
-        // if (!empty($_GET['order'])) {
-        //     $order = $_GET['order'];
-        // }
-
-
-        // $result = strcmp($a[$orderby], $b[$orderby]);
-
-        // if ($order === 'asc') {
-        //     return $result;
-        // }
-
-        // return -$result;
-
         // If no sort, default to user_login
         $orderby = (!empty($_GET['orderby'])) ? $_GET['orderby'] : 'Name';
 
@@ -247,12 +224,11 @@ class Google_Sheet_Table extends WP_List_Table
 
         $action = $this->current_action();
 
-
         switch ($action) {
             case 'delete':
-                foreach ($_GET['id'] as $id) {
-                    // bulk delete action here
-                }
+                // foreach ($_GET['id'] as $id) {
+                // bulk delete action here
+                // }
 
                 wp_die('You have deleted this succesfully');
                 break;

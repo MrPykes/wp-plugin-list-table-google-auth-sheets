@@ -25,6 +25,7 @@ function register_my_custom_menu_page()
 
 function google_auth()
 {
+    global $post;
 
     require_once(GOOGLE_PATH . '/vendor/autoload.php');
     include_once GOOGLE_PATH . '/admin/class_google_sheet_table.php';
